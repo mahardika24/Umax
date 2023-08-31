@@ -86,4 +86,8 @@
   position: relative;
   top: -1.3px;
 }
-
+.kecil{
+  font-size: 10px;
+  position: relative;
+  top: 5px;
+}
