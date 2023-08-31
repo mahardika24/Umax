@@ -7,6 +7,7 @@ import CardInfo from '../components/CardInfo';
 import Chart from '../components/Chart';
 import Card from '../components/Card';
 import Metrics from '../components/Metrics';
+import History from '../components/History';
 import { FiAlertTriangle } from 'react-icons/fi';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
@@ -20,6 +21,130 @@ const Dashboard = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
+  // bagian chart metrix
+  const chartData1 = [
+    { name: 'Day1', value: 5, color: '#8690A2' },
+    { name: 'Day2', value: 10, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData2 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 20, color: '#8690A2' },
+    { name: 'Day5', value: 10, color: '#8690A2' },
+    { name: 'Day6', value: 15, color: '#8690A2' },
+    { name: 'Day7', value: 5, color: '#FF3636' },
+  ];
+
+  const chartData3 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData4 = [
+    { name: 'Day1', value: 5, color: '#8690A2' },
+    { name: 'Day2', value: 10, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 15, color: '#8690A2' },
+    { name: 'Day5', value: 6, color: '#8690A2' },
+    { name: 'Day6', value: 9, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData5 = [
+    { name: 'Day1', value: 20, color: '#8690A2' },
+    { name: 'Day2', value: 16, color: '#8690A2' },
+    { name: 'Day3', value: 10, color: '#8690A2' },
+    { name: 'Day4', value: 20, color: '#8690A2' },
+    { name: 'Day5', value: 10, color: '#8690A2' },
+    { name: 'Day6', value: 16, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData6 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData7 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 6, color: '#FF3636' },
+  ];
+
+  const chartData8 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 5, color: '#FF3636' },
+  ];
+
+  const chartData9 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData10 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData11 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+  const chartData12 = [
+    { name: 'Day1', value: 10, color: '#8690A2' },
+    { name: 'Day2', value: 15, color: '#8690A2' },
+    { name: 'Day3', value: 7, color: '#8690A2' },
+    { name: 'Day4', value: 12, color: '#8690A2' },
+    { name: 'Day5', value: 15, color: '#8690A2' },
+    { name: 'Day6', value: 10, color: '#8690A2' },
+    { name: 'Day7', value: 20, color: '#1CD14F' },
+  ];
+
+
+// end
 
 
   const renderContent = () => {
@@ -77,7 +202,7 @@ const Dashboard = () => {
                           <p>Pastikan iklan atau tautan Anda memiliki judul atau gambar yang menarik</p>
                         </div>
                       </div>
-                      <a href="https://makinrajin.com/blog/ctr-adalah/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://chat.openai.com/share/3bb35f6a-4b3b-4182-b6f9-c880722b3c72" target="_blank" rel="noopener noreferrer">
                       <div className='mt-2 hover:underline  text-end text-sm'>
                         learn more
                       </div>
@@ -95,7 +220,7 @@ const Dashboard = () => {
                           <p>Pastikan bahwa landing page Anda memiliki konten yang relavan, menarik, dan informatif</p>
                         </div>
                       </div>
-                      <a href="https://www.hazamusik.com/2020/02/cara-menghilangkan-dengung-pada-power.html" target="_blank" rel="noopener noreferrer">
+                      <a href="https://chat.openai.com/share/cb290ced-08a9-4153-93dc-470a1e0fd126" target="_blank" rel="noopener noreferrer">
                       <div className='mt-2 hover:underline  text-end text-sm'>
                         learn more
                       </div>
@@ -123,50 +248,54 @@ const Dashboard = () => {
             {/* end */}
 
             {/* bagian content */}
-            <div className='flex gap-3 '>
-      {/* Card 1 */}
-      <div className='w-full md:w-1/3'>
-        <Metrics
-          title='Amount Spent'
-          value='Rp. 4.000.000'
-          chartData='Chart data '
-          icon={<AiOutlineInfoCircle size={20} />}
-          info='Description '
-        />
-      </div>
+            <div className='flex'>
+          <div className='w-full justify-center flex flex-row gap-3 md:w-full '>
+          <Metrics title="Amount Spent" value="Rp. 4.000.000" chartData={chartData1} icon={<AiOutlineInfoCircle size={20}  />} persen="+2,0%" description="Total Amount spent compared to last 7 day"  persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          <Metrics title="Reach" value="97.000" chartData={chartData2} icon={<AiOutlineInfoCircle size={20}  />} persen="-2,0%" description="Total Reach compared to last 7 day"  persenTextColor="#D40B0B" spanBackgroundColor="#FF6D6D" />
+          <Metrics title="Impression" value="230.000" chartData={chartData3} icon={<AiOutlineInfoCircle size={20}  />} persen="+2,0%" description="Total Impression compared to last 7 day"  persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          </div>
+            </div>
 
-      {/* Card 2 */}
-      <div className='w-full md:w-1/3'>
-        <Metrics
-          title='Reach Amount Ratio'
-          value='6.1%'
-          chartData='Chart data '
-          info='Description  '
-          icon={<AiOutlineInfoCircle size={20} />}
-        />
-      </div>
+            <div className='flex'>
+          <div className='w-full justify-center flex flex-row gap-3 md:w-full '>
+          <Metrics title="Frequency" value="2,3" chartData={chartData4} icon={<AiOutlineInfoCircle size={20}  />} persen="+2,0%" description={<span style={{ fontSize: '12.3px', whiteSpace: 'nowrap'}}>Total Frequency compared to last 7 day</span>}
+            persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          <Metrics title="Reach Amount Ratio" value="6,1%" chartData={chartData5} icon={<AiOutlineInfoCircle size={20} />} persen="-2,0%" description={<span style={{ fontSize: '7.9px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total Reach Amount Ratio compared to last 7 day</span>}
+            persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          <Metrics title="Cost per Click" value="Rp. 2.000" chartData={chartData6} icon={<AiOutlineInfoCircle size={20} />} persen="+2,0%" description={<span style={{ fontSize: '10.4px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total Cost per Click compared to last 7 day</span>}
+          persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          </div>
+          </div>
 
-      {/* Card 3 */}
-      <div className='w-full md:w-1/3'>
-        <Metrics
-          title='Click Through Rate'
-          value='1.0%'
-          chartData='Chart data '
-          info='Description '
-          icon={<AiOutlineInfoCircle size={20} />}
-        />
-      </div>
-    </div>
+          <div className='flex'>
+          <div className='w-full justify-center flex flex-row gap-3 md:w-full '>
+          <Metrics title="Click Through Rate" value="1,0%" chartData={chartData7} icon={<AiOutlineInfoCircle size={20}  />} persen="+2,0%" description={<span style={{ fontSize: '10.1px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total Click Through Rate compared to last 7 day</span>} 
+            persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          <Metrics titleBig="Outbont Click Landing Page" value="30%" chartData={chartData8} icon={<AiOutlineInfoCircle size={20} />} persen="-2,0%" description={<span style={{ fontSize: '11.5px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total OCLP compared to last 7 day</span>}
+            persenTextColor="#D40B0B" spanBackgroundColor="#FF6D6D" />
+          <Metrics title="Cost per Result" value="Rp. 5.000" chartData={chartData9} icon={<AiOutlineInfoCircle size={20}  />} persen="+2,0%" description={<span style={{ fontSize: '10.1px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total Cost per Result compared to last 7 day</span>}
+            persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          </div>
+          </div>
+          <div className='flex'>
+          <div className='w-full justify-center flex flex-row gap-3 md:w-full '>
+          <Metrics title="Add to Cart" value="2,5%" chartData={chartData10} icon={<AiOutlineInfoCircle size={20}  />} persen="+2,0%" description={<span style={{ fontSize: '12px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total Add to Cart compared to last 7 day</span>}
+            persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          <Metrics title="Return on AD Spent" value="3,1x" chartData={chartData11} icon={<AiOutlineInfoCircle size={20}  />} persen="-2,0%" description={<span style={{ fontSize: '11.6px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total ROAS compared to last 7 day</span>} 
+            persenTextColor="#D40B0B" spanBackgroundColor="#FF6D6D" />
+          <Metrics title="Real ROAS" value="3,0x" chartData={chartData12} icon={<AiOutlineInfoCircle size={20}  />} persen="+2,0%"description={<span style={{ fontSize: '11.4px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Total Real ROAS compared to last 7 day</span>}
+            persenTextColor="#656F84" spanBackgroundColor="#1CD14F" />
+          </div>
+          </div>
 
             </div>
         );
       case 'history':
         return (
-          // Render content for History tab
           <div>
-            {/* ... */}
-            <h2>Konten History</h2>
-            {/* ... */}
+            <div className="p-4 border bg-white shadow-md">
+        <History />
+      </div>
           </div>
         );
       case 'setting':

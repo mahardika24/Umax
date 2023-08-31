@@ -93,9 +93,7 @@ function DataTable() {
     setTableData(updatedData);
   };
 
-  const availablePlatforms = [...new Set(data.map((item) => item.platform))]; 
-  const availableClients = [...new Set(data.map((item) => item.client))]; 
-  const availableStatuses = [...new Set(data.map((item) => item.status))]; 
+
 
   return (
     <div className="relative  bg-white p-5 m-3  rounded-lg ">

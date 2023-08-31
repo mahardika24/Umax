@@ -157,3 +157,43 @@
                     </div>
                   </div>
           </li>
+
+
+
+
+
+
+                 <div className='flex gap-3 '>
+      {/* Card 1 */}
+      <div className='w-full md:w-1/3'>
+        <Metrics
+          title='Amount Spent'
+          value='Rp. 4.000.000'
+          chartData='Chart data '
+          icon={<AiOutlineInfoCircle size={20} />}
+          info='Description '
+        />
+      </div>
+
+      {/* Card 2 */}
+      <div className='w-full md:w-1/3'>
+        <Metrics
+          title='Reach Amount Ratio'
+          value='6.1%'
+          chartData='Chart data '
+          info='Description  '
+          icon={<AiOutlineInfoCircle size={20} />}
+        />
+      </div>
+
+      {/* Card 3 */}
+      <div className='w-full md:w-1/3'>
+        <Metrics
+          title='Click Through Rate'
+          value='1.0%'
+          chartData='Chart data '
+          info='Description '
+          icon={<AiOutlineInfoCircle size={20} />}
+        />
+      </div>
+    </div>
