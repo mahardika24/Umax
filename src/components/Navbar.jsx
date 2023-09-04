@@ -5,7 +5,7 @@ import { MdDashboard } from "react-icons/md";
 import { BiSolidMegaphone, BiGroup, BiBell, BiLogOut} from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
 import { CiSettings } from "react-icons/ci";
-import {logo, profile} from "../assets"
+import {logo, profile, } from "../assets"
 import { FiSun, FiMoon } from "react-icons/fi";
 import '../styles.css';
 import React, {useEffect } from 'react';
